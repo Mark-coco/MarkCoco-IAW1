@@ -1,0 +1,12 @@
+baseURL : "http://192.168.1.58/"
+languageCode : "ca-es"
+title : "καρύδα Restaurant"
+theme: "basic-hugo"
+menu:
+ main:
+ - name: carta
+   url: /carta/
+   weight: -110
+ - name: Sobre el Restaurant
+   url: /'Sobre el Restaurant'/
+   weight: -100

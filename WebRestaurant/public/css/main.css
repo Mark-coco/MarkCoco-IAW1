@@ -1,0 +1,134 @@
+
+html {
+    color: #222;
+    font-size: 1em;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font: 1em Helvetica, Helvetica Neue, Arial;
+    margin: 0px;
+    padding: 0px;
+
+    /*
+        display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    */
+    display: grid;
+    grid-gap: rem;
+    /*Fem una graella de 3x12 */
+    max-width: 1920px;
+    min-height: 100vh;
+    grid-template-columns: 100%;
+    grid-template-rows: 100px
+        1fr     /*Fa que ocupe l'espai*/
+        50px;
+}
+
+.header-container,
+.footer-container,
+.main-container aside {
+    background: #333;
+    color: #ffffff; 
+    
+}
+
+.header-container{
+
+    background-color: rgb(233, 181, 86);
+   border: 1px solid black;
+   padding: 15px 15px 15px 15px;
+   width: 100%;
+    
+}
+
+.main-container{
+    /*
+    flex: 1;
+    /*
+    flex:1 és equivalent a posar:
+
+    flex-grow: 1;
+    flex-shrink:1;
+    flex-basis: 1;
+    * /
+    display: flex;
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap-reverse;*/
+    background-color: rgb(111, 184, 233);
+    border: 1px solid black;
+    padding: 15px 15px 15px 15px;
+    width: 100%;
+    height: 250px;
+}
+
+.main-container article{
+   /* flex: 10 1 0; */
+    padding: 15px 15px 15px 15px;
+    position: absolute;
+    left: 20px;
+    width: 40%;
+
+}
+
+
+.main-container aside{
+    
+   /* flex: 1 1 500px;
+    
+    flex: 2 1 400px;*/
+    border: 1px solid black;
+    position: absolute;
+    right: 5%;
+    width: 40%;
+    padding: 15px 15px 15px 15px;
+    
+}
+
+
+.footer-container{
+
+    background-color: rgb(119, 202, 24);
+    border: 1px solid black;
+    padding: 15px 15px 15px 15px;
+    width: 100%;
+}
+
+.main-container aside ul a{
+    text-decoration: none;
+}
+.main-container aside ul li{
+    list-style-type: none;
+}
+
+.title {
+    color: white;
+}
+
+
+.mainNavigation{
+    float: left;
+    list-style: none;
+    margin-left: 1em;
+    color: #ffffff;
+}
+
+.mainNavigation a, aside a{
+ text-decoration: none;
+ color: #ffffff;
+
+ 
+}
+
+.mainNavigation a:visited, aside a:visited{
+    color: #ffffff;
+}
+
+.mainNavigation a:hover, aside a:hover{
+    color: #000000;
+    background-color: #ffffff;
+}
