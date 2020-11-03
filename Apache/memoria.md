@@ -43,32 +43,32 @@ Comprovar-em si tenim una instal·lació prèvia del paquet, i quina versió hi 
 
     **$ sudo chgrp www-data /var/www/html** 
 
-![chgrp](.\chgrp.png)
+![chgrp](images/chgrp.png)
 
 - I afegim el nostre usuari a aquest grup: 
 
     **$ sudo usermod -a -G www-data eljust**
 
-![usermod](.\usermod.png)
+![usermod](images/usermod.png)
  
 - Donem els següent permissos de forma recursiva:
 
     **$ sudo chmod -R 775 /var/www/html**
     **$ sudo chmod -R g+s /var/www/html**
 
-![chmod](.\chmod.png)
+![chmod](images/chmod.png)
 
 - També ens afegim com als propietaris d’aquest directori, per poder treballar amb ell:
 
     **$ sudo chown -R eljust /var/www/html**
 
-![chown](.\chown.png)
+![chown](images/chown.png)
 
 - Ara crearem una carpeta public amb la funció “Hugo -D” en l’atra maquina virtual on tenim la pagina web, canviarem la direcció  de la pàgina web situada en “config.yaml” a la ip del servidor Apache.
 
     **$ Hugo -D**
 
-![Hugo-d](.\hugo-d.png)
+![Hugo-d](images/hugo-d.png)
 
 
 
@@ -76,6 +76,6 @@ Comprovar-em si tenim una instal·lació prèvia del paquet, i quina versió hi 
 
     **$ scp -r public/* eljust@192.168.1.58:/var/www/html**
 
-![srcp](.\scp.png)
+![srcp](images/scp.png)
 
-![public](.\public.png)
+![public](images/public.png)
